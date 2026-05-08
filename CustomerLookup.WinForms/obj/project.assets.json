@@ -1,0 +1,100 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "CustomerLookup.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/CustomerLookup.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CustomerLookup.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CustomerLookup.Shared/1.0.0": {
+      "type": "project",
+      "path": "../CustomerLookup.Shared/CustomerLookup.Shared.csproj",
+      "msbuildProject": "../CustomerLookup.Shared/CustomerLookup.Shared.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "CustomerLookup.Shared >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\foyeb\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj",
+      "projectName": "CustomerLookup.WinForms",
+      "projectPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj",
+      "packagesPath": "C:\\Users\\foyeb\\.nuget\\packages\\",
+      "outputPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.WinForms\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\foyeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\foyeb\\Downloads\\edifabric.examples\\EdiFabric.Sdk": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
+              "projectPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.313/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

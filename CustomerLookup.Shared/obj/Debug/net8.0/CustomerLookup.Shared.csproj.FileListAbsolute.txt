@@ -1,0 +1,11 @@
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\obj\Debug\net8.0\CustomerLookup.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\obj\Debug\net8.0\CustomerLookup.Shared.AssemblyInfoInputs.cache
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\obj\Debug\net8.0\CustomerLookup.Shared.AssemblyInfo.cs
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\obj\Debug\net8.0\CustomerLookup.Shared.csproj.CoreCompileInputs.cache
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\bin\Debug\net8.0\CustomerLookup.Shared.deps.json
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\bin\Debug\net8.0\CustomerLookup.Shared.dll
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\bin\Debug\net8.0\CustomerLookup.Shared.pdb
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\obj\Debug\net8.0\CustomerLookup.Shared.dll
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\obj\Debug\net8.0\refint\CustomerLookup.Shared.dll
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\obj\Debug\net8.0\CustomerLookup.Shared.pdb
+C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Shared\obj\Debug\net8.0\ref\CustomerLookup.Shared.dll

@@ -1,0 +1,72 @@
+﻿@page "/customer-lookup"
+@using CustomerLookup.Shared.Models
+@inject CustomerLookup.Shared.Data.CustomerService CustomerService
+
+<PageTitle>Customer Lookup</PageTitle>
+
+<h3>Customer Lookup</h3>
+
+<p>
+    This page demonstrates a legacy WinForms-style customer lookup screen migrated into a modern Blazor interface.
+</p>
+
+<div class="mb-3">
+    <input class="form-control"
+           placeholder="Search by customer number, name, or account type"
+           @bind="searchTerm"
+           @bind:event="oninput" />
+</div>
+
+<button class="btn btn-primary mb-3" @onclick="SearchCustomers">
+    Search
+</button>
+
+@if (customers is null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!customers.Any())
+{
+    <p>No customers found.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Customer #</th>
+                <th>Name</th>
+                <th>Account Type</th>
+                <th>Balance</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in customers)
+            {
+                <tr>
+                    <td>@customer.CustomerNumber</td>
+                    <td>@customer.Name</td>
+                    <td>@customer.AccountType</td>
+                    <td>@customer.CurrentBalance.ToString("C")</td>
+                    <td>@customer.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private string searchTerm = "";
+    private List<Customer>? customers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        customers = await CustomerService.SearchAsync(searchTerm);
+    }
+
+    private async Task SearchCustomers()
+    {
+        customers = await CustomerService.SearchAsync(searchTerm);
+    }
+}
