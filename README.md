@@ -35,3 +35,73 @@ LegacyCustomerLookup
 │   └── Shared reusable business/data layer
 │
 └── LegacyCustomerLookup.sln
+
+# Technologies Used
+
+## Backend / Shared Layer
+- C#
+- .NET 8
+- Shared Class Library
+- Object-Oriented Design
+- Dependency Injection
+
+## Blazor Application
+- Blazor Web App (.NET 8)
+- Razor Components
+- Component-Based Architecture
+
+## WinForms Application
+- Windows Forms
+- DataGridView
+- Event-driven desktop UI
+
+## Tooling
+- Git
+- GitHub
+- Visual Studio 2022
+- .NET CLI
+- PowerShell
+
+---
+
+# Features
+
+## WinForms Application
+- Legacy desktop customer lookup screen
+- Search customer records
+- Display customer data in DataGridView
+- Simulates traditional enterprise desktop systems
+
+## Blazor Application
+- Modern browser-based customer lookup
+- Shared service layer with WinForms app
+- Responsive component-based UI
+- Demonstrates modernization strategy
+
+## Shared Data Layer
+- Reusable customer model
+- Shared customer service
+- Centralized mock data source
+- Eliminates duplicated business logic
+
+---
+
+# Architecture Overview
+
+The `CustomerLookup.Shared` project contains:
+- Shared customer model
+- Shared customer retrieval/search service
+- Centralized business logic
+
+Both applications consume the same shared service layer:
+
+```text
+WinForms UI
+      │
+      ▼
+Shared CustomerService
+      ▲
+      │
+Blazor UI
+
+
