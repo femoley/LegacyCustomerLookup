@@ -1,4 +1,4 @@
-# LegacyCustomerLookup Modernization Demo
+# Legacy Customer Lookup Modernization Demo
 
 This repository demonstrates the modernization of a legacy Windows Forms customer lookup application into a modern Blazor web application while sharing a common business/data layer.
 
