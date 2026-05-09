@@ -35,6 +35,7 @@ LegacyCustomerLookup
 │   └── Shared reusable business/data layer
 │
 └── LegacyCustomerLookup.sln
+```
 
 # Technologies Used
 
@@ -64,7 +65,7 @@ LegacyCustomerLookup
 
 ---
 
-# Features
+# 🚀 Features
 
 ## WinForms Application
 - Legacy desktop customer lookup screen
@@ -103,5 +104,16 @@ Shared CustomerService
       ▲
       │
 Blazor UI
+```
+
+# Application Screenshots
+
+## WinForms Application
+
+![WinForms UI](docs/images/winform-ui.png)
+
+## Blazor Application
+
+![Blazor UI](docs/images/blazor-ui.png)
 
 
