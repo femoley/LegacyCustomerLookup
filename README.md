@@ -12,7 +12,7 @@ The solution showcases:
 
 ---
 
-# Solution Structure
+# 🏗 Solution Structure
 
 ```text
 LegacyCustomerLookup
@@ -145,9 +145,9 @@ Blazor UI
 
 ![Blazor UI](docs/images/blazor-ui.png)
 
-# Getting Started
+# 📦 Getting Started
 
-## Prerequisites
+## 🧰 Prerequisites
 
 Install the following tools before running the solution:
 
