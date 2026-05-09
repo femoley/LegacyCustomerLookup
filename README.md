@@ -37,6 +37,8 @@ LegacyCustomerLookup
 └── LegacyCustomerLookup.sln
 ```
 
+---
+
 # Technologies Used
 
 ## Backend / Shared Layer
@@ -84,36 +86,7 @@ LegacyCustomerLookup
 - Shared customer service
 - Centralized mock data source
 - Eliminates duplicated business logic
-
----
-
-# Shared Architecture
-
-## Both applications share the same reusable business/data layer located in:
-
-```text
-CustomerLookup.Shared
-```
-
-This shared layer contains:
-- Customer models
-- Customer retrieval service
-- Centralized reusable business logic
-
-
-Architecture flow:
-```text
-WinForms UI
-      │
-      ▼
-Shared CustomerService
-      ▲
-      │
-Blazor UI
-```
-
-This demonstrates an enterprise modernization strategy where legacy desktop applications can gradually migrate to modern web technologies while preserving reusable backend logic.
-
+  
 ---
 
 # Architecture Overview
@@ -135,6 +108,10 @@ Shared CustomerService
 Blazor UI
 ```
 
+This demonstrates an enterprise modernization strategy where legacy desktop applications can gradually migrate to modern web technologies while preserving reusable backend logic.
+
+---
+
 # Application Screenshots
 
 ## WinForms Application
@@ -144,6 +121,8 @@ Blazor UI
 ## Blazor Application
 
 ![Blazor UI](docs/images/blazor-ui.png)
+
+---
 
 # 📦 Getting Started
 
@@ -178,7 +157,7 @@ dotnet build
 
 # Running the Blazor Application
 
-## Run the Blazor web application:
+## ✅ Run the Blazor web application:
 
 ```powershell
 dotnet run --project CustomerLookup.Blazor
@@ -199,7 +178,7 @@ https://localhost:7185
 
 # Running the WinForms Application
 
-## Run the WinForms desktop application:
+## ✅ Run the WinForms desktop application:
 
 ```powershell
 dotnet run --project CustomerLookup.WinForms
