@@ -87,6 +87,35 @@ LegacyCustomerLookup
 
 ---
 
+# Shared Architecture
+
+## Both applications share the same reusable business/data layer located in:
+
+```text
+CustomerLookup.Shared
+```
+
+This shared layer contains:
+- Customer models
+- Customer retrieval service
+- Centralized reusable business logic
+
+
+Architecture flow:
+```text
+WinForms UI
+      │
+      ▼
+Shared CustomerService
+      ▲
+      │
+Blazor UI
+```
+
+This demonstrates an enterprise modernization strategy where legacy desktop applications can gradually migrate to modern web technologies while preserving reusable backend logic.
+
+---
+
 # Architecture Overview
 
 The `CustomerLookup.Shared` project contains:
@@ -115,5 +144,78 @@ Blazor UI
 ## Blazor Application
 
 ![Blazor UI](docs/images/blazor-ui.png)
+
+# Getting Started
+
+## Prerequisites
+
+Install the following tools before running the solution:
+
+- .NET 8 SDK
+- Visual Studio 2022
+- Git
+
+Verify .NET installation:
+
+```powershell
+dotnet --version
+```
+
+Expected output:
+
+```text
+8.x.x
+```
+
+# Build the Solution
+
+## Open a terminal in the repository root folder and run:
+
+```powershell
+dotnet clean
+dotnet build
+```
+
+# Running the Blazor Application
+
+## Run the Blazor web application:
+
+```powershell
+dotnet run --project CustomerLookup.Blazor
+```
+Expected output:
+
+```text
+Now listening on: https://localhost:xxxx
+```
+
+Open the browser using the HTTPS URL displayed in the terminal.
+
+Example:
+
+```text
+https://localhost:7185
+```
+
+# Running the WinForms Application
+
+## Run the WinForms desktop application:
+
+```powershell
+dotnet run --project CustomerLookup.WinForms
+```
+
+This launches the legacy Windows Forms customer lookup application.
+
+
+
+
+
+
+
+
+
+
+
 
 
