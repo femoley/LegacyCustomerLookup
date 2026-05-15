@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HfzuKWf1MjI=",
+  "dgSpecHash": "PRnDiuwUblQ=",
   "success": true,
-  "projectFilePath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj",
+  "projectFilePath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Winforms\\CustomerLookup.WinForms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\foyeb\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\foyeb\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CustomerLookup.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db7bcb32e0c2369a0f74b2978d58c06b4e2140d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d39b7e19a9e84638f35c0d7905a89590e9b942f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CustomerLookup.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CustomerLookup.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

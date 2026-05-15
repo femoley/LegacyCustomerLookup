@@ -187,6 +187,84 @@ dotnet run --project CustomerLookup.WinForms
 This launches the legacy Windows Forms customer lookup application.
 
 
+---
+
+# Application Screenshots
+
+## Blazor Customer Lookup
+
+![Blazor Customer Lookup](docs/images/blazor-search.png)
+
+Interactive Blazor Server customer lookup page supporting real-time search against SQL Server-backed customer data using Entity Framework Core and reusable shared service architecture.
+
+---
+
+## Legacy WinForms Customer Lookup
+
+![WinForms Customer Lookup](docs/images/winforms-search.png)
+
+Legacy Windows Forms implementation demonstrating the original desktop-based customer lookup workflow prior to modernization.
+
+---
+
+## SQL Server Customer Data
+
+![SQL Server Customers Table](docs/images/sql-server-customers-table.png)
+
+SQL Server persistence layer containing customer records consumed by both WinForms and Blazor applications through a shared Entity Framework Core DbContext and CustomerService layer.
+
+---
+
+# SQL Server Integration
+
+The solution now includes SQL Server integration using Entity Framework Core and a shared reusable data access architecture.
+
+## Features
+
+- Shared Entity Framework Core DbContext
+- SQL Server-backed customer persistence
+- Reusable CustomerService consumed by both applications
+- Interactive Blazor customer search functionality
+- Dependency Injection across applications
+- Shared business/data architecture
+- Centralized customer retrieval logic
+- Search filtering by:
+  - Customer ID
+  - First Name
+  - Last Name
+  - Email
+  - Account Number
+
+## Technologies Used
+
+- SQL Server Express
+- Entity Framework Core 8
+- .NET 8
+- Blazor Server
+- Windows Forms
+- Dependency Injection
+- Shared Service Layer Architecture
+
+---
+
+## Architecture Overview
+
+```text
+WinForms UI
+      │
+      ▼
+Shared CustomerService
+      │
+      ▼
+Entity Framework Core
+      │
+      ▼
+SQL Server Database
+      ▲
+      │
+Blazor UI
+```
+
 
 
 

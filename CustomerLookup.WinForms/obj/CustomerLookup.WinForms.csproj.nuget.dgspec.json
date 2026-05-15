@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj": {}
+    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Winforms\\CustomerLookup.WinForms.csproj": {}
   },
   "projects": {
     "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj": {
+    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Winforms\\CustomerLookup.WinForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj",
+        "projectUniqueName": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Winforms\\CustomerLookup.WinForms.csproj",
         "projectName": "CustomerLookup.WinForms",
-        "projectPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj",
+        "projectPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Winforms\\CustomerLookup.WinForms.csproj",
         "packagesPath": "C:\\Users\\foyeb\\.nuget\\packages\\",
-        "outputPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\obj\\",
+        "outputPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Winforms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\foyeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
