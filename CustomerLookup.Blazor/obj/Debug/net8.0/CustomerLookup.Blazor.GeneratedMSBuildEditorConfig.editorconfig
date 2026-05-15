@@ -9,51 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CustomerLookup.Blazor
 build_property.RootNamespace = CustomerLookup.Blazor
-build_property.ProjectDir = C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Blazor\
+build_property.ProjectDir = C:\legacycustomerlookup-blazormigration\CustomerLookup.Blazor\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\LegacyCustomerLookup-BlazorMigration\CustomerLookup.Blazor
+build_property.MSBuildProjectDirectory = C:\legacycustomerlookup-blazormigration\CustomerLookup.Blazor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Components/App.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Components/Pages/Counter.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Components/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Components/Pages/Error.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Components/Pages/Home.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Components/Pages/Weather.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Components/Routes.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Components/_Imports.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Pages/CustomerSearch.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Pages/CustomerSearch.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJTZWFyY2gucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Components/Layout/MainLayout.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-4cus5n4764
 
-[C:/LegacyCustomerLookup-BlazorMigration/CustomerLookup.Blazor/Components/Layout/NavMenu.razor]
+[C:/legacycustomerlookup-blazormigration/CustomerLookup.Blazor/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-ry6nazwgty

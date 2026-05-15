@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pnv5D9Z/dQPAL9bNSbN1l0bFU5huZoEYojevYJD90DE=",
+  "Hash": "VEzo2GwSUbjBNzks3RR9SgjOGMv32wYFzak4aMkC5Rc=",
   "Source": "CustomerLookup.Blazor",
   "BasePath": "_content/CustomerLookup.Blazor",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CustomerLookup.Blazor\\wwwroot",
       "Source": "CustomerLookup.Blazor",
-      "ContentRoot": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\wwwroot\\",
+      "ContentRoot": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\wwwroot\\",
       "BasePath": "_content/CustomerLookup.Blazor",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CustomerLookup.Blazor.styles.css",
+      "Identity": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CustomerLookup.Blazor.styles.css",
       "SourceId": "CustomerLookup.Blazor",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CustomerLookup.Blazor",
       "RelativePath": "CustomerLookup.Blazor.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CustomerLookup.Blazor.styles.css"
+      "OriginalItemSpec": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CustomerLookup.Blazor.styles.css"
     },
     {
-      "Identity": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CustomerLookup.Blazor.bundle.scp.css",
+      "Identity": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CustomerLookup.Blazor.bundle.scp.css",
       "SourceId": "CustomerLookup.Blazor",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/CustomerLookup.Blazor",
       "RelativePath": "CustomerLookup.Blazor.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CustomerLookup.Blazor.bundle.scp.css"
+      "OriginalItemSpec": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CustomerLookup.Blazor.bundle.scp.css"
     },
     {
-      "Identity": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\wwwroot\\app.css",
+      "Identity": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\wwwroot\\app.css",
       "SourceId": "CustomerLookup.Blazor",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\wwwroot\\",
+      "ContentRoot": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\wwwroot\\",
       "BasePath": "_content/CustomerLookup.Blazor",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "CustomerLookup.Blazor",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\wwwroot\\",
+      "ContentRoot": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\wwwroot\\",
       "BasePath": "_content/CustomerLookup.Blazor",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "CustomerLookup.Blazor",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\wwwroot\\",
+      "ContentRoot": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\wwwroot\\",
       "BasePath": "_content/CustomerLookup.Blazor",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\wwwroot\\favicon.png",
+      "Identity": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\wwwroot\\favicon.png",
       "SourceId": "CustomerLookup.Blazor",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\wwwroot\\",
+      "ContentRoot": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\wwwroot\\",
       "BasePath": "_content/CustomerLookup.Blazor",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\CustomerLookup.Blazor2.props" />
+</Project>

@@ -1,0 +1,61 @@
+﻿@page "/customer-lookup"
+@rendermode InteractiveServer
+@using CustomerLookup.Shared.Models
+@inject CustomerLookup.Shared.Data.CustomerService CustomerService
+
+<h3>Customer Lookup</h3>
+
+<input class="form-control mb-3"
+       placeholder="Search by id, first name, last name, email or account number"
+       @bind="searchTerm"
+       @bind:event="oninput" />
+
+<button type="button" class="btn btn-primary mb-3" @onclick="SearchCustomers">
+    Search
+</button>
+
+<p>@message</p>
+
+@if (customers is not null)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Account #</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in customers)
+            {
+                <tr>
+                    <td>@customer.Id</td>
+                    <td>@customer.FirstName</td>
+                    <td>@customer.LastName</td>
+                    <td>@customer.Email</td>
+                    <td>@customer.AccountNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private string searchTerm = "";
+    private string message = "";
+    private List<Customer>? customers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        customers = await CustomerService.SearchAsync(searchTerm);
+    }
+
+    private async Task SearchCustomers()
+    {
+        message = $"Search clicked at {DateTime.Now:T}";
+        customers = await CustomerService.SearchAsync(searchTerm);
+    }
+}

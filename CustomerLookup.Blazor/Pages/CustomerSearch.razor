@@ -1,6 +1,8 @@
 ﻿@page "/customer-lookup"
+@rendermode Microsoft.AspNetCore.Components.Web.RenderMode.InteractiveServer
 @using CustomerLookup.Shared.Models
 @inject CustomerLookup.Shared.Data.CustomerService CustomerService
+
 
 <PageTitle>Customer Lookup</PageTitle>
 
@@ -12,14 +14,19 @@
 
 <div class="mb-3">
     <input class="form-control"
-           placeholder="Search by customer number, name, or account type"
+           placeholder="Search by id, first name, last name, email or account number"
            @bind="searchTerm"
            @bind:event="oninput" />
 </div>
 
-<button class="btn btn-primary mb-3" @onclick="SearchCustomers">
+<button type="button" class="btn btn-primary mb-3" @onclick="SearchCustomers">
     Search
 </button>
+
+
+<button @onclick="TestClick">TEST CLICK</button>
+
+<p>@message</p>
 
 @if (customers is null)
 {
@@ -34,22 +41,22 @@ else
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Customer #</th>
-                <th>Name</th>
-                <th>Account Type</th>
-                <th>Balance</th>
-                <th>Status</th>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Account Number</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var customer in customers)
             {
                 <tr>
-                    <td>@customer.CustomerNumber</td>
-                    <td>@customer.Name</td>
-                    <td>@customer.AccountType</td>
-                    <td>@customer.CurrentBalance.ToString("C")</td>
-                    <td>@customer.Status</td>
+                    <td>@customer.Id.ToString()</td>
+                    <td>@customer.FirstName</td>
+                    <td>@customer.LastName</td>
+                    <td>@customer.Email</td>
+                    <td>@customer.AccountNumber</td>
                 </tr>
             }
         </tbody>
@@ -68,5 +75,13 @@ else
     private async Task SearchCustomers()
     {
         customers = await CustomerService.SearchAsync(searchTerm);
+        await InvokeAsync(StateHasChanged); //added
+    }
+
+    private string message = "";
+
+    private void TestClick()
+    {
+        message = "Button clicked!";
     }
 }

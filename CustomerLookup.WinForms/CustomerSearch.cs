@@ -4,14 +4,15 @@ namespace CustomerLookup.WinForms;
 
 public partial class CustomerSearch : Form
 {
-    private readonly CustomerService _customerService = new();
+    private readonly CustomerService _customerService; //modified
     private TextBox _searchBox = new();
     private Button _searchButton = new();
     private DataGridView _grid = new();
 
-    public CustomerSearch()
+    public CustomerSearch(CustomerService customerService) //added
     {
         InitializeComponent();
+        _customerService = customerService; //added
 
         Text = "Legacy WinForms Customer Lookup";
         Width = 900;
@@ -29,8 +30,9 @@ public partial class CustomerSearch : Form
         _searchBox.Width = 300;
 
         _searchButton.Left = 330;
-        _searchButton.Top = 18;
+        _searchButton.Top = 18; 
         _searchButton.Width = 100;
+        _searchButton.Height = 30; //added
         _searchButton.Text = "Search";
         _searchButton.Click += async (_, _) => await LoadCustomersAsync();
 

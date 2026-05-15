@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj": {}
+    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj": {}
   },
   "projects": {
-    "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
+    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj",
+        "projectUniqueName": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj",
         "projectName": "CustomerLookup.Shared",
-        "projectPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj",
+        "projectPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj",
         "packagesPath": "C:\\Users\\foyeb\\.nuget\\packages\\",
-        "outputPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\obj\\",
+        "outputPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\foyeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlserver": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -65,14 +81,14 @@
         }
       }
     },
-    "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj": {
+    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj",
+        "projectUniqueName": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj",
         "projectName": "CustomerLookup.WinForms",
-        "projectPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj",
+        "projectPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\CustomerLookup.WinForms.csproj",
         "packagesPath": "C:\\Users\\foyeb\\.nuget\\packages\\",
-        "outputPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.WinForms\\obj\\",
+        "outputPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.WinForms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\foyeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,8 +106,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
-                "projectPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj"
+              "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
+                "projectPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj"
               }
             }
           }
@@ -110,6 +126,16 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

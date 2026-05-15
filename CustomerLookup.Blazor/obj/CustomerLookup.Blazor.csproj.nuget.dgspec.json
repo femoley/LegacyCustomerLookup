@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\CustomerLookup.Blazor.csproj": {}
+    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\CustomerLookup.Blazor.csproj": {}
   },
   "projects": {
-    "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\CustomerLookup.Blazor.csproj": {
+    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\CustomerLookup.Blazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\CustomerLookup.Blazor.csproj",
+        "projectUniqueName": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\CustomerLookup.Blazor.csproj",
         "projectName": "CustomerLookup.Blazor",
-        "projectPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\CustomerLookup.Blazor.csproj",
+        "projectPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\CustomerLookup.Blazor.csproj",
         "packagesPath": "C:\\Users\\foyeb\\.nuget\\packages\\",
-        "outputPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Blazor\\obj\\",
+        "outputPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Blazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\foyeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
-                "projectPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj"
+              "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
+                "projectPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
+    "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj",
+        "projectUniqueName": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj",
         "projectName": "CustomerLookup.Shared",
-        "projectPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj",
+        "projectPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\CustomerLookup.Shared.csproj",
         "packagesPath": "C:\\Users\\foyeb\\.nuget\\packages\\",
-        "outputPath": "C:\\LegacyCustomerLookup-BlazorMigration\\CustomerLookup.Shared\\obj\\",
+        "outputPath": "C:\\legacycustomerlookup-blazormigration\\CustomerLookup.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\foyeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -113,6 +113,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlserver": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
