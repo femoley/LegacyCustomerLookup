@@ -112,18 +112,6 @@ This demonstrates an enterprise modernization strategy where legacy desktop appl
 
 ---
 
-# Application Screenshots
-
-## WinForms Application
-
-![WinForms UI](docs/images/winform-ui.png)
-
-## Blazor Application
-
-![Blazor UI](docs/images/blazor-ui.png)
-
----
-
 # 📦 Getting Started
 
 ## 🧰 Prerequisites
@@ -312,6 +300,9 @@ This validation is enforced through:
 
 # Validation & Update Workflow Screenshots
 
+Customer records including editable email addresses and account numbers displayed within the interactive Blazor customer lookup grid.
+
+
 ## 1. Blazor Customer Lookup Before Email Updates
 
 ![Blazor Before Update](docs/images/blazor-before-update.png)
@@ -344,7 +335,23 @@ The system prevents duplicate email addresses from being assigned to multiple cu
 
 ---
 
-## 5. Successful Email Address Updates
+## 5. Blazor Customer Lookup Before Email modifications are saved
+
+![Blazor Before saved](docs/images/blazor-unsaved-changes.png)
+
+Customer lookup screen showing unsaved email address modifications.
+
+---
+
+
+## 6. Update Email modifications highlighted
+
+![Blazor after saved ](docs/images/blazor-success-highlight.png)
+
+Blazor application highlighting the successful batch email updates.
+
+
+## 7. Successful Email Address Updates
 
 ![Successful Update](docs/images/blazor-after-update.png)
 
@@ -352,7 +359,7 @@ Blazor application displaying successful batch email updates and confirmation me
 
 ---
 
-## 6. SQL Server Records After Update
+## 8. SQL Server Records After Update
 
 ![SQL After Update](docs/images/sql-after-update.png)
 

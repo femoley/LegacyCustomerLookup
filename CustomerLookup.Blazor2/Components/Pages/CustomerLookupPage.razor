@@ -19,7 +19,7 @@
 </div>
 
 <div class="mb-3">
-    <button type="button" class="btn btn-primary me-2" @onclick="SearchCustomers">
+    <button type="button" class="btn btn-primary me-2" @onclick="() => SearchCustomers()">
         Search
     </button>
 
@@ -49,18 +49,17 @@ else
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Account #</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email Address</th>
+                <th>Account #</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var customer in customers)
             {
-                <tr>
+                <tr class="@GetRowCssClass(customer)">
                     <td>@customer.Id</td>
-                    <td>@customer.AccountNumber</td>
                     <td>@customer.FirstName</td>
                     <td>@customer.LastName</td>
                     <td>
@@ -83,6 +82,7 @@ else
                             }
                         </div>
                     </td>
+                    <td>@customer.AccountNumber</td>
                 </tr>
             }
         </tbody>
@@ -97,10 +97,10 @@ else
     private string statusCssClass = "alert alert-info";
 
     private Dictionary<int, string> pendingEmails = new();
-
     private Dictionary<int, EditableEmailInput> emailInputRefs = new();
-
     private int? firstInvalidCustomerId;
+
+    private HashSet<int> recentlySavedCustomerIds = new();
 
  
     protected override async Task OnInitializedAsync()
@@ -108,7 +108,7 @@ else
         await SearchCustomers();
     }
 
-    private async Task SearchCustomers()
+    private async Task SearchCustomers(bool clearStatusMessage = true)
     {
         customers = await CustomerService.SearchAsync(searchTerm);
 
@@ -117,7 +117,12 @@ else
             c => c.Email);
 
         firstInvalidCustomerId = null;
-        statusMessage = "";
+
+        if (clearStatusMessage)
+        {
+            statusMessage = "";
+            statusCssClass = "alert alert-info";
+        }
     }
 
     private async Task HandleSearchKeyUp(KeyboardEventArgs e)
@@ -178,6 +183,8 @@ else
                 c => c.Id,
                 c => pendingEmails[c.Id]);
 
+        var updatedCustomerIds = updates.Keys.ToList();
+
         if (!updates.Any())
         {
             statusMessage = "No email changes were detected.";
@@ -194,8 +201,22 @@ else
 
         if (result.Success)
         {
-            await SearchCustomers();
+            recentlySavedCustomerIds = updatedCustomerIds.ToHashSet();
+
+            await SearchCustomers(false);
+
             statusMessage = result.Message;
+
+            StateHasChanged();
+
+            _ = Task.Run(async () =>
+            {
+                await Task.Delay(2500);
+
+                recentlySavedCustomerIds.Clear();
+
+                await InvokeAsync(StateHasChanged);
+            });
         }
     }
 
@@ -224,5 +245,16 @@ else
             email,
             @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
             System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+    }
+
+    private string GetRowCssClass(Customer customer)
+    {
+        if (recentlySavedCustomerIds.Contains(customer.Id))
+            return "table-success";
+
+        if (IsEmailModified(customer))
+            return "table-warning";
+
+        return string.Empty;
     }
 }
