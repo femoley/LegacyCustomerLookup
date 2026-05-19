@@ -1,0 +1,27 @@
+﻿<input class="@CssClass"
+       value="@Value"
+       @ref="emailInput"
+       @oninput="OnInputChanged" />
+
+@code {
+    private ElementReference emailInput;
+
+    [Parameter] public int CustomerId { get; set; }
+    [Parameter] public string Value { get; set; } = "";
+    [Parameter] public bool IsInvalid { get; set; }
+    [Parameter] public EventCallback<string> ValueChanged { get; set; }
+
+    private string CssClass =>
+        IsInvalid ? "form-control is-invalid" : "form-control";
+
+    private async Task OnInputChanged(ChangeEventArgs e)
+    {
+        Value = e.Value?.ToString() ?? string.Empty;
+        await ValueChanged.InvokeAsync(Value);
+    }
+
+    public async Task FocusAsync()
+    {
+        await emailInput.FocusAsync();
+    }
+}

@@ -264,6 +264,118 @@ SQL Server Database
       │
 Blazor UI
 ```
+---
+
+# Customer Email Update & Validation Enhancements
+
+The project was enhanced to support inline customer email address updates directly within the Blazor application using SQL Server-backed persistence and enterprise-style validation workflows.
+
+## Features Added
+
+- Inline editable email address fields
+- Batch update support for multiple modified email addresses
+- SQL Server persistence using Entity Framework Core
+- Email format validation
+- Unique email address validation
+- Automatic focus on invalid email cells
+- Visual indicators for modified but unsaved email addresses
+- Real-time update feedback and validation messages
+
+## Business Rules Implemented
+
+### Valid Email Address Validation
+
+The system validates that all email addresses entered follow a valid email format before updates are committed to SQL Server.
+
+Examples of invalid values:
+- invalid-email
+- customer@
+- @example.com
+
+### Unique Email Address Validation
+
+The system verifies that each email address is unique across all customer records.
+
+This validation is enforced through:
+- Application-level validation
+- SQL Server unique index constraint
+
+### User Experience Improvements
+
+- Pressing Enter in the search textbox automatically executes the search
+- Modified email addresses display an Unsaved indicator
+- Invalid email cells automatically receive focus
+- Invalid rows are visually highlighted
+- Batch updates allow multiple rows to be updated simultaneously
+
+---
+
+# Validation & Update Workflow Screenshots
+
+## 1. Blazor Customer Lookup Before Email Updates
+
+![Blazor Before Update](docs/images/blazor-before-update.png)
+
+Initial customer lookup screen before email address modifications are applied.
+
+---
+
+## 2. SQL Server Customer Records Before Update
+
+![SQL Before Update](docs/images/sql-before-update.png)
+
+Customer records stored in SQL Server before updates are committed.
+
+---
+
+## 3. Invalid Email Address Validation
+
+![Invalid Email Validation](docs/images/blazor-invalid-email.png)
+
+The system validates invalid email formats, displays an error message, highlights the invalid row, and automatically focuses the appropriate email cell.
+
+---
+
+## 4. Duplicate Email Address Validation
+
+![Duplicate Email Validation](docs/images/blazor-duplicate-email.png)
+
+The system prevents duplicate email addresses from being assigned to multiple customers.
+
+---
+
+## 5. Successful Email Address Updates
+
+![Successful Update](docs/images/blazor-after-update.png)
+
+Blazor application displaying successful batch email updates and confirmation message.
+
+---
+
+## 6. SQL Server Records After Update
+
+![SQL After Update](docs/images/sql-after-update.png)
+
+SQL Server customer records after email address updates were successfully committed.
+
+---
+
+# Enterprise Concepts Demonstrated
+
+This enhancement demonstrates several enterprise application engineering concepts:
+
+- Blazor interactive components
+- SQL Server integration
+- Entity Framework Core persistence
+- Shared service-layer architecture
+- Business-rule validation
+- Batch update workflows
+- User experience enhancements
+- Inline editable grids
+- Focus management and validation UX
+- Dependency Injection
+- Reusable backend services
+- Enterprise modernization architecture patterns
 
 
 

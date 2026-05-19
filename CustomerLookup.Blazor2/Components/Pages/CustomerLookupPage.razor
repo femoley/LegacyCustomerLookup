@@ -1,31 +1,58 @@
 ﻿@page "/customer-lookup"
 @rendermode InteractiveServer
 @using CustomerLookup.Shared.Models
+@using Microsoft.AspNetCore.Components.Web
 @inject CustomerLookup.Shared.Data.CustomerService CustomerService
+@using Microsoft.AspNetCore.Components
+@using CustomerLookup.Blazor2.Components.shared
+
 
 <h3>Customer Lookup</h3>
 
-<input class="form-control mb-3"
-       placeholder="Search by id, first name, last name, email or account number"
-       @bind="searchTerm"
-       @bind:event="oninput" />
+<div class="mb-3">
+    <label class="form-label">Search Customers</label>
+    <input class="form-control"
+           placeholder="Search by id, first name, last name, email or account number"
+           @bind="searchTerm"
+           @bind:event="oninput"
+           @onkeyup="HandleSearchKeyUp" />
+</div>
 
-<button type="button" class="btn btn-primary mb-3" @onclick="SearchCustomers">
-    Search
-</button>
+<div class="mb-3">
+    <button type="button" class="btn btn-primary me-2" @onclick="SearchCustomers">
+        Search
+    </button>
 
-<p>@message</p>
+    <button type="button" class="btn btn-success" @onclick="UpdateEmails">
+        Update Modified Emails
+    </button>
+</div>
 
-@if (customers is not null)
+@if (!string.IsNullOrWhiteSpace(statusMessage))
+{
+    <div class="@statusCssClass">
+        @statusMessage
+    </div>
+}
+
+@if (customers is null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!customers.Any())
+{
+    <p>No customers found.</p>
+}
+else
 {
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Account #</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Email</th>
-                <th>Account #</th>
+                <th>Email Address</th>
             </tr>
         </thead>
         <tbody>
@@ -33,10 +60,29 @@
             {
                 <tr>
                     <td>@customer.Id</td>
+                    <td>@customer.AccountNumber</td>
                     <td>@customer.FirstName</td>
                     <td>@customer.LastName</td>
-                    <td>@customer.Email</td>
-                    <td>@customer.AccountNumber</td>
+                    <td>
+                        <div class="d-flex align-items-center gap-2">
+                            <EditableEmailInput CustomerId="@customer.Id"
+                                                Value="@GetPendingEmail(customer)"
+                                                ValueChanged="@(email => SetPendingEmail(customer.Id, email))"
+                                                IsInvalid="@(firstInvalidCustomerId == customer.Id)"
+                                                @ref="emailInputRefs[customer.Id]" />
+
+                            @if (IsEmailModified(customer))
+                            {
+                                <!--span class="badge bg-warning text-dark" title="Email modified but not saved">
+                                    Unsaved
+                                </!--span-->
+
+                                <span title="Email modified but not saved" style="font-size: 1.2rem;">
+                                    ✏️
+                                </span>
+                            }
+                        </div>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -45,17 +91,138 @@
 
 @code {
     private string searchTerm = "";
-    private string message = "";
     private List<Customer>? customers;
 
+    private string statusMessage = "";
+    private string statusCssClass = "alert alert-info";
+
+    private Dictionary<int, string> pendingEmails = new();
+
+    private Dictionary<int, EditableEmailInput> emailInputRefs = new();
+
+    private int? firstInvalidCustomerId;
+
+ 
     protected override async Task OnInitializedAsync()
     {
-        customers = await CustomerService.SearchAsync(searchTerm);
+        await SearchCustomers();
     }
 
     private async Task SearchCustomers()
     {
-        message = $"Search clicked at {DateTime.Now:T}";
         customers = await CustomerService.SearchAsync(searchTerm);
+
+        pendingEmails = customers.ToDictionary(
+            c => c.Id,
+            c => c.Email);
+
+        firstInvalidCustomerId = null;
+        statusMessage = "";
+    }
+
+    private async Task HandleSearchKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            await SearchCustomers();
+        }
+    }
+
+    private string GetPendingEmail(Customer customer)
+    {
+        return pendingEmails.TryGetValue(customer.Id, out var email)
+            ? email
+            : customer.Email;
+    }
+
+    private void SetPendingEmail(int customerId, string email)
+    {
+        pendingEmails[customerId] = email;
+    }
+
+    private async Task UpdateEmails()
+    {
+        firstInvalidCustomerId = null;
+
+        if (customers is null || !customers.Any())
+        {
+            statusMessage = "No customers available to update.";
+            statusCssClass = "alert alert-warning";
+            return;
+        }
+
+        foreach (var customer in customers)
+        {
+            if (!pendingEmails.TryGetValue(customer.Id, out var email))
+                continue;
+
+            if (!string.Equals(email, customer.Email, StringComparison.OrdinalIgnoreCase))
+            {
+                if (string.IsNullOrWhiteSpace(email) || !IsValidEmailFormat(email))
+                {
+                    firstInvalidCustomerId = customer.Id;
+                    statusMessage = $"Invalid email address for customer {customer.Id}.";
+                    statusCssClass = "alert alert-danger";
+
+                    await FocusInvalidEmailAsync();
+                    return;
+                }
+            }
+        }             
+
+        var updates = customers
+            .Where(c =>
+                pendingEmails.ContainsKey(c.Id) &&
+                pendingEmails[c.Id] != c.Email)
+            .ToDictionary(
+                c => c.Id,
+                c => pendingEmails[c.Id]);
+
+        if (!updates.Any())
+        {
+            statusMessage = "No email changes were detected.";
+            statusCssClass = "alert alert-info";
+            return;
+        }
+
+        var result = await CustomerService.UpdateEmailsAsync(updates);
+
+        statusMessage = result.Message;
+        statusCssClass = result.Success
+            ? "alert alert-success"
+            : "alert alert-danger";
+
+        if (result.Success)
+        {
+            await SearchCustomers();
+            statusMessage = result.Message;
+        }
+    }
+
+    private async Task FocusInvalidEmailAsync()
+    {
+        await InvokeAsync(StateHasChanged);
+        await Task.Delay(50);
+
+        if (firstInvalidCustomerId.HasValue &&
+            emailInputRefs.TryGetValue(firstInvalidCustomerId.Value, out var inputComponent) &&
+            inputComponent is not null)
+        {
+            await inputComponent.FocusAsync();
+        }
+    }
+
+    private bool IsEmailModified(Customer customer)
+    {
+        return pendingEmails.TryGetValue(customer.Id, out var pendingEmail)
+            && !string.Equals(pendingEmail, customer.Email, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static bool IsValidEmailFormat(string email)
+    {
+        return System.Text.RegularExpressions.Regex.IsMatch(
+            email,
+            @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+            System.Text.RegularExpressions.RegexOptions.IgnoreCase);
     }
 }
