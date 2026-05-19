@@ -344,7 +344,7 @@ Customer lookup screen showing unsaved email address modifications.
 ---
 
 
-## 6. Update Email modifications highlighted
+## 6. Updated Email Addresses highlighted
 
 ![Blazor after saved ](docs/images/blazor-success-highlight.png)
 
